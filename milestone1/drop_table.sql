@@ -1,0 +1,9 @@
+DROP TABLE Cases;
+DROP TABLE Involved;
+DROP TABLE Rules;
+DROP TABLE Court;
+DROP TABLE Judge;
+DROP TABLE Supreme_court_reviewed;
+DROP TABLE En_banc_reviewed;
+DROP TABLE Party;
+DROP TABLE Tech_judge;
