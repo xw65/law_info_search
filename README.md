@@ -1,4 +1,4 @@
 law_info_search
 ===============
 
-a web for searching law related information
+a web application for searching law related information
