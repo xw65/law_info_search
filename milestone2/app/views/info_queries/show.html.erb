@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Is owner:</strong>
+  <%= @info_query.is_owner %>
+</p>
+
+<p>
+  <strong>User size:</strong>
+  <%= @info_query.user_size %>
+</p>
+
+<p>
+  <strong>Oppo size:</strong>
+  <%= @info_query.oppo_size %>
+</p>
+
+<p>
+  <strong>User loc:</strong>
+  <%= @info_query.user_loc %>
+</p>
+
+<p>
+  <strong>Oppo loc:</strong>
+  <%= @info_query.oppo_loc %>
+</p>
+
+<p>
+  <strong>Law issue:</strong>
+  <%= @info_query.law_issue %>
+</p>
+
+<p>
+  <strong>Tech area:</strong>
+  <%= @info_query.tech_area %>
+</p>
+
+<p>
+  <strong>Judge1:</strong>
+  <%= @info_query.judge1 %>
+</p>
+
+<p>
+  <strong>Judge2:</strong>
+  <%= @info_query.judge2 %>
+</p>
+
+<p>
+  <strong>Judge3:</strong>
+  <%= @info_query.judge3 %>
+</p>
+
+<%= link_to 'Edit', edit_info_query_path(@info_query) %> |
+<%= link_to 'Back', info_queries_path %>

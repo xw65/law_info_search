@@ -1,0 +1,2 @@
+class InfoFinderController < ApplicationController
+end

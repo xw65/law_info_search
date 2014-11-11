@@ -1,0 +1,10 @@
+<center>
+<title bgcolor="blue">
+<h1>New info_query</h1>
+</title>
+</center>
+<h3>Please input basic information: </h3>
+<%= render 'form' %>
+
+<%= link_to 'Back', info_queries_path %>
+

@@ -1,0 +1,58 @@
+<%= form_for(@info_query) do |f| %>
+  <% if @info_query.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@info_query.errors.count, "error") %> prohibited this info_query from being saved:</h2>
+
+      <ul>
+      <% @info_query.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :is_owner, "Are you a patent owner?" %><br>
+    <%= f.check_box :is_owner %>
+  </div>
+  <div class="field">
+    <%= f.label :user_size, "Please input your company size" %><br>
+    <%= f.number_field :user_size %>
+  </div>
+  <div class="field">
+    <%= f.label :oppo_size, "Please input your opponent company size" %><br>
+    <%= f.number_field :oppo_size %>
+  </div>
+  <div class="field">
+    <%= f.label :user_loc, "Please input your company location" %><br>
+    <%= f.text_field :user_loc %>
+  </div>
+  <div class="field">
+    <%= f.label :oppo_loc, "Please input your opponent company location" %><br>
+    <%= f.text_field :oppo_loc %>
+  </div>
+  <div class="field">
+    <%= f.label :law_issue, "Please input your patent law issue of the lawsuit" %><br>
+    <%= f.text_field :law_issue %>
+  </div>
+  <div class="field">
+    <%= f.label :tech_area, "Please input your technical area of the lawsuit" %><br>
+    <%= f.text_field :tech_area %>
+  </div>
+  <p>Please input the names of the judges that will hear the case</p>
+  <div class="field">
+    <%= f.label :judge1 %><br>
+    <%= f.text_field :judge1 %>
+  </div>
+  <div class="field">
+    <%= f.label :judge2 %><br>
+    <%= f.text_field :judge2 %>
+  </div>
+  <div class="field">
+    <%= f.label :judge3 %><br>
+    <%= f.text_field :judge3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

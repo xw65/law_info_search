@@ -1,0 +1,57 @@
+<%= form_for(@info_query) do |f| %>
+  <% if @info_query.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@info_query.errors.count, "error") %> prohibited this info_query from being saved:</h2>
+
+      <ul>
+      <% @info_query.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :is_owner, "Are you a patent owner?" %><br>
+    <%= f.check_box :is_owner %>
+  </div>
+  <div class="field">
+    <%= f.label :user_size %><br>
+    <%= f.number_field :user_size %>
+  </div>
+  <div class="field">
+    <%= f.label :oppo_size %><br>
+    <%= f.number_field :oppo_size %>
+  </div>
+  <div class="field">
+    <%= f.label :user_loc %><br>
+    <%= f.text_field :user_loc %>
+  </div>
+  <div class="field">
+    <%= f.label :oppo_loc %><br>
+    <%= f.text_field :oppo_loc %>
+  </div>
+  <div class="field">
+    <%= f.label :law_issue %><br>
+    <%= f.text_field :law_issue %>
+  </div>
+  <div class="field">
+    <%= f.label :tech_area %><br>
+    <%= f.text_field :tech_area %>
+  </div>
+  <div class="field">
+    <%= f.label :judge1 %><br>
+    <%= f.text_field :judge1 %>
+  </div>
+  <div class="field">
+    <%= f.label :judge2 %><br>
+    <%= f.text_field :judge2 %>
+  </div>
+  <div class="field">
+    <%= f.label :judge3 %><br>
+    <%= f.text_field :judge3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

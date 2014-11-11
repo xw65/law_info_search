@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_owner: false
+  user_size: 1
+  oppo_size: 1
+  user_loc: MyString
+  oppo_loc: MyString
+  law_issue: MyString
+  tech_area: MyString
+  judge1: MyString
+  judge2: MyString
+  judge3: MyString
+
+two:
+  is_owner: false
+  user_size: 1
+  oppo_size: 1
+  user_loc: MyString
+  oppo_loc: MyString
+  law_issue: MyString
+  tech_area: MyString
+  judge1: MyString
+  judge2: MyString
+  judge3: MyString

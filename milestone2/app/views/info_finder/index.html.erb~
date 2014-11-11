@@ -1,0 +1,25 @@
+<head>
+<center>	
+<h1>Law Infomation Finder</h1>
+</center>
+</head>
+
+<body>
+<!--generate two button to two other pages-->
+<br><br>
+<table width=90% align=center>
+<tr bgcolor="#ffeeee">
+<td><b>Please Choose</b></td>
+</tr>
+
+
+
+<tr bgcolor="eeeeff">
+<td> <center><%= button_to 'Find Case Information', info_list_path %> </center></td>
+<td> <center><%= button_to 'Analyse Judge Preference', info_ana_path %> </center></td>
+</tr>
+
+
+
+
+</body>
