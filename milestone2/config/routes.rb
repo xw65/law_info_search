@@ -16,7 +16,7 @@ root 'info_finder#index'
 get 'info_finder' => 'info_finder#index', as: :info_finder
 #post 'info_queries' => 'info_queries#index', as: :info_queries
 post 'info_ana' => 'info_ana#index', as: :info_ana
-
+get 'info' => 'info_finder#test'
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

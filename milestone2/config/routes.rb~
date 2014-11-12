@@ -14,7 +14,7 @@ root 'info_finder#index'
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
 get 'info_finder' => 'info_finder#index', as: :info_finder
-post 'info_list' => 'info_list#index', as: :info_list
+#post 'info_queries' => 'info_queries#index', as: :info_queries
 post 'info_ana' => 'info_ana#index', as: :info_ana
 
   # Example resource route (maps HTTP verbs to controller actions automatically):

@@ -26,10 +26,12 @@ class InfoQueriesController < ApplicationController
   def create
     # current info_query
     @info_query = InfoQuery.new(info_query_params)
-    
+    @test = "a test"
+    #render "/info_queries/test.html.erb"
+    #return
     respond_to do |format|
       if @info_query.save
-        format.html { redirect_to @info_query, notice: 'Info query was successfully created.' }
+        format.html { redirect_to @info_query,  notice: 'Info query was successfully created.' }
         format.json { render :show, status: :created, location: @info_query }
       else
         format.html { render :new }
@@ -72,4 +74,27 @@ class InfoQueriesController < ApplicationController
     def info_query_params
       params.require(:info_query).permit(:is_owner, :user_size, :oppo_size, :user_loc, :oppo_loc, :law_issue, :tech_area, :judge1, :judge2, :judge3)
     end
+
+    # define function for query 1
+    def find_percent(info) 
+    	win = 0
+	total = 0
+    	@cases = Cases.all
+	@involves = Involveds.all
+	@parties = Parties.all
+	@cases.each do |_case|
+	    @involves.each do |involve|
+	    	# party1 is user, party2 is oppo
+	        @parites.each do |party1|
+		    @parties.each do |party2|
+		        if (party1.size == info.user_size && party2.size == info.oppo_size)
+		    	
+			end
+		    end			    
+		end
+	    end
+	end
+    end     
+
+    
 end
