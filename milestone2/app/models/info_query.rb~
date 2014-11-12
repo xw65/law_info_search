@@ -1,2 +1,0 @@
-class InfoQuery < ActiveRecord::Base
-end
