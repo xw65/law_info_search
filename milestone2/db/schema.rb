@@ -11,7 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110194054) do
+ActiveRecord::Schema.define(version: 20141112011914) do
+
+  create_table "cases", force: true do |t|
+    t.integer  "serial"
+    t.string   "name"
+    t.string   "issue"
+    t.string   "technical_area"
+    t.date     "time"
+    t.string   "result"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chambers_ats", force: true do |t|
+    t.integer  "court_id"
+    t.integer  "judge_id"
+    t.date     "start_time"
+    t.date     "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chief_judges", force: true do |t|
+    t.integer  "court_id"
+    t.integer  "judge_id"
+    t.date     "start_time"
+    t.date     "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "courts", force: true do |t|
+    t.integer  "court_num"
+    t.string   "name"
+    t.string   "city"
+    t.string   "state"
+    t.string   "level"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "info_queries", force: true do |t|
     t.boolean  "is_owner"
@@ -24,6 +63,36 @@ ActiveRecord::Schema.define(version: 20141110194054) do
     t.string   "judge1"
     t.string   "judge2"
     t.string   "judge3"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "involves", force: true do |t|
+    t.integer  "case_id"
+    t.integer  "party_id"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "judges", force: true do |t|
+    t.integer  "judge_num"
+    t.string   "name"
+    t.string   "gender"
+    t.string   "location"
+    t.date     "birthday"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parties", force: true do |t|
+    t.integer  "party_num"
+    t.string   "name"
+    t.integer  "size"
+    t.string   "location"
+    t.string   "race"
+    t.string   "gender"
+    t.string   "political_affiliation"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

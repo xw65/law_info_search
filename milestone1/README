@@ -1,0 +1,8 @@
+--Database
+The database we choose is sqlite3, which is installed on Mac by default.
+
+--create database
+1. create and enter new database: >sqlite3 <database_name>
+2. read in table schema: >.read __path__to__schema.sql
+3. insert data: >.read __path__to__insert_data.sql
+4. sample query: >.read __path__to__TEST-SAMPLE.SQL
