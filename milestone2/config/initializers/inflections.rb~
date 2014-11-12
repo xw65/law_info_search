@@ -2,16 +2,6 @@
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.irregular 'involve','involves'
-  inflect.irregular 'en_banc_review','en_banc_reviews'
-  inflect.irregular 'supreme_court_review','supreme_court_reviews'
-  inflect.irregular 'rule','rules'
-  inflect.irregular 'chambers_at','chambers_ats'
-  inflect.irregular 'chief_judge','chief_judges'
-  inflect.irregular 'court','courts'
-  inflect.irregular 'judge','judges'
-  inflect.irregular 'party','parties'
-  inflect.irregular 'case','cases'
-  inflect.irregular 'tech_judge','tech_judges'
 end
 
 # Add new inflection rules using the following format. Inflections
