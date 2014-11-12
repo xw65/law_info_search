@@ -79,21 +79,11 @@ class InfoQueriesController < ApplicationController
     def find_percent(info) 
     	win = 0
 	total = 0
-    	@cases = Cases.all
-	@involves = Involveds.all
-	@parties = Parties.all
-	@cases.each do |_case|
-	    @involves.each do |involve|
-	    	# party1 is user, party2 is oppo
-	        @parites.each do |party1|
-		    @parties.each do |party2|
-		        if (party1.size == info.user_size && party2.size == info.oppo_size)
-		    	
-			end
-		    end			    
-		end
-	    end
-	end
+    	@cases = Case.find(:issue => info.law_issue)
+	@user_parties = Party.find(:size => info.user_size)
+	@oppo_parties = Party.find(:size => info.oppo_size)
+	@involves = @user_parties.involves
+	@
     end     
 
     
